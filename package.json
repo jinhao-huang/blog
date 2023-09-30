@@ -11,6 +11,7 @@
   "dependencies": {
     "next": "latest",
     "react": "latest",
+    "react-aria-components": "1.0.0-beta.0",
     "react-dom": "latest"
   },
   "devDependencies": {
