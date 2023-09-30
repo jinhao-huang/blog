@@ -12,7 +12,8 @@
     "next": "latest",
     "react": "latest",
     "react-aria-components": "1.0.0-beta.0",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "react-icons": "^4.11.0"
   },
   "devDependencies": {
     "@types/node": "latest",
