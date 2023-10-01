@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formatjs/intl-localematcher": "^0.4.2",
+    "@types/negotiator": "^0.6.1",
+    "negotiator": "^0.6.3",
     "next": "latest",
     "react": "latest",
     "react-aria-components": "1.0.0-beta.0",
