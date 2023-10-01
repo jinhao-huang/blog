@@ -22,7 +22,11 @@ export default function Navigation() {
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">1BitBool</span>
-            <img className="h-8 w-auto" src="/vercel.svg" alt="1BitBool" />
+            <img
+              className="h-8 w-auto"
+              src="/assets/vercel.svg"
+              alt="1BitBool"
+            />
           </a>
         </div>
         <div className="flex lg:hidden">
@@ -67,7 +71,11 @@ export default function Navigation() {
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">1BitBool</span>
-              <img className="h-8 w-auto" src="/vercel.svg" alt="1BitBool" />
+              <img
+                className="h-8 w-auto"
+                src="/assets/vercel.svg"
+                alt="1BitBool"
+              />
             </a>
             <button
               type="button"
