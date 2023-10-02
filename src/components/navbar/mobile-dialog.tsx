@@ -7,8 +7,13 @@ import {
 
 export default function MobileDialog({
   navigations,
+  aria_dict,
 }: {
   navigations: { name: string; href: string }[];
+  aria_dict: {
+    open_menu: string;
+    close_menu: string;
+  };
 }) {
   return (
     <DialogTrigger>
@@ -16,7 +21,7 @@ export default function MobileDialog({
         type="button"
         className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
       >
-        <span className="sr-only">Open main menu</span>
+        <span className="sr-only">{aria_dict.open_menu}</span>
         <Bars3Icon className="h-6 w-6" aria-hidden="true" />
       </Button>
       <Modal className="lg:hidden">
@@ -39,7 +44,7 @@ export default function MobileDialog({
                   className="-m-2.5 rounded-md p-2.5 text-gray-700"
                   onPress={close}
                 >
-                  <span className="sr-only">Close menu</span>
+                  <span className="sr-only">{aria_dict.close_menu}</span>
                   <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                 </Button>
               </div>
