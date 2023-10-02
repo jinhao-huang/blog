@@ -1,7 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Navigation from "@/components/navigation";
+import Navbar from "@/components/navbar";
 import { i18n, Locale } from "@/i18n";
 import { notFound } from "next/navigation";
 
@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <body className={inter.className}>
-        <Navigation></Navigation>
+        <Navbar></Navbar>
         {children}
       </body>
     </html>

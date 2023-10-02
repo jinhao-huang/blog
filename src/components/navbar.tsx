@@ -4,12 +4,12 @@ import { HiOutlineBars3 as Bars3Icon } from "react-icons/hi2";
 import { FaGlobe } from "react-icons/fa";
 import { Button, Dialog, DialogTrigger, Modal } from "react-aria-components";
 
-const navigation = [
+const navigations = [
   { name: "Posts", href: "#" },
   { name: "About", href: "#" },
 ];
 
-export default function Navigation() {
+export default function Navbar() {
   return (
     <header className="bg-white">
       <nav
@@ -62,7 +62,7 @@ export default function Navigation() {
                     <div className="mt-6 flow-root">
                       <div className="-my-6 divide-y divide-gray-500/10">
                         <div className="space-y-2 py-6">
-                          {navigation.map((item) => (
+                          {navigations.map((item) => (
                             <a
                               key={item.name}
                               href={item.href}
@@ -86,7 +86,7 @@ export default function Navigation() {
           </DialogTrigger>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
-          {navigation.map((item) => (
+          {navigations.map((item) => (
             <a
               key={item.name}
               href={item.href}
