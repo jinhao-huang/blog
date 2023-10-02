@@ -1,5 +1,16 @@
 {
   "App": {
     "hello": "你好"
+  },
+  "Components": {
+    "Navbar": {
+      "posts": "文章",
+      "about": "关于",
+      "Aria": {
+        "open_menu": "打开菜单",
+        "close_menu": "关闭菜单",
+        "switch_language": "切换语言"
+      }
+    }
   }
 }

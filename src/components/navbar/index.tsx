@@ -1,12 +1,13 @@
 import { FaGlobe } from "react-icons/fa";
 import MobileDialog from "./mobile-dialog";
-
-const navigations = [
-  { name: "Posts", href: "#" },
-  { name: "About", href: "#" },
-];
+import { useTranslations } from "next-intl";
 
 export default function Navbar() {
+  const dict = useTranslations("Components.Navbar");
+  const navigations = [
+    { name: dict("posts"), href: "#" },
+    { name: dict("about"), href: "#" },
+  ];
   return (
     <header className="bg-white">
       <nav

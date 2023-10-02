@@ -1,5 +1,16 @@
 {
   "App": {
     "hello": "Hello"
+  },
+  "Components": {
+    "Navbar": {
+      "posts": "Posts",
+      "about": "About",
+      "Aria": {
+        "open_menu": "Open menu",
+        "close_menu": "Close menu",
+        "switch_language": "Switch language"
+      }
+    }
   }
 }
