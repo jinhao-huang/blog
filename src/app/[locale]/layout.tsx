@@ -2,6 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navigation from "@/components/navigation";
+import { i18n, Locale } from "@/i18n";
+import { notFound } from "next/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,11 +14,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params: { locale },
 }: {
   children: React.ReactNode;
+  params: { locale: Locale };
 }) {
+  const isValidLocale = i18n.locales.some((cur) => cur === locale);
+  if (!isValidLocale) notFound();
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className={inter.className}>
         <Navigation></Navigation>
         {children}
