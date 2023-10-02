@@ -13,6 +13,7 @@
     "@types/negotiator": "^0.6.1",
     "negotiator": "^0.6.3",
     "next": "latest",
+    "next-intl": "3.0.0-beta.19",
     "react": "latest",
     "react-aria-components": "1.0.0-beta.0",
     "react-dom": "latest",
