@@ -23,9 +23,6 @@ export default function Navbar() {
             />
           </a>
         </div>
-        <div className="flex lg:hidden">
-          <MobileDialog navigations={navigations}></MobileDialog>
-        </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {navigations.map((item) => (
             <a
@@ -37,7 +34,7 @@ export default function Navbar() {
             </a>
           ))}
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div className="flex flex-1 justify-end gap-4">
           <button
             type="button"
             className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -45,6 +42,9 @@ export default function Navbar() {
             <span className="sr-only">Switch Language</span>
             <FaGlobe className="h-6 w-6"></FaGlobe>
           </button>
+          <div className="flex lg:hidden">
+            <MobileDialog navigations={navigations}></MobileDialog>
+          </div>
         </div>
       </nav>
     </header>
