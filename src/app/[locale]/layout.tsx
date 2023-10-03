@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Navbar from "@/components/navbar";
 import { i18n, Locale } from "@/i18n";
 import { notFound } from "next/navigation";
+import { Providers } from "@/app/[locale]/providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,10 +24,10 @@ export default function RootLayout({
   if (!isValidLocale) notFound();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} suppressHydrationWarning>
       <body className={inter.className}>
         <Navbar></Navbar>
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
