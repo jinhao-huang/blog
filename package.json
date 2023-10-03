@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
     "next": "latest",
     "next-intl": "3.0.0-beta.19",
     "next-themes": "^0.2.1",
