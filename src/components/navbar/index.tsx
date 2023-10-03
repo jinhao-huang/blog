@@ -9,7 +9,7 @@ export default function Navbar() {
     { name: dict("about"), href: "#" },
   ];
   return (
-    <header className="bg-white">
+    <header className="bg-white dark:bg-gray-900">
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 border-b border-b-gray-200"
         aria-label="Global"
@@ -29,7 +29,7 @@ export default function Navbar() {
             <a
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-gray-900"
+              className="text-sm font-semibold leading-6 text-gray-900 dark:text-white"
             >
               {item.name}
             </a>
@@ -38,7 +38,7 @@ export default function Navbar() {
         <div className="flex flex-1 justify-end gap-4">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-400"
           >
             <span className="sr-only">{dict("Aria.switch_language")}</span>
             <FaGlobe className="h-6 w-6"></FaGlobe>
