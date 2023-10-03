@@ -1,10 +1,5 @@
-import { useTranslations } from "next-intl";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  const dict = useTranslations("App");
-  return (
-    <>
-      <h1>{dict("hello")}, 1BitBool!</h1>
-    </>
-  );
+  redirect("posts");
 }
