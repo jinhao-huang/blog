@@ -33,6 +33,7 @@
     "postcss": "latest",
     "prettier": "3.0.3",
     "tailwindcss": "latest",
+    "tailwindcss-animate": "^1.0.7",
     "typescript": "latest"
   }
 }
