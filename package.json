@@ -32,6 +32,7 @@
     "eslint-config-next": "latest",
     "postcss": "latest",
     "prettier": "3.0.3",
+    "sass": "^1.68.0",
     "tailwindcss": "latest",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "latest"
