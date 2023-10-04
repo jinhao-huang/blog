@@ -1,6 +1,8 @@
 {
   "App": {
-    "hello": "你好"
+    "Posts": {
+      "latest_posts": "最新文章"
+    }
   },
   "Components": {
     "Navbar": {

@@ -1,6 +1,8 @@
 {
   "App": {
-    "hello": "Hello"
+    "Posts": {
+      "latest_posts": "Latest posts"
+    }
   },
   "Components": {
     "Navbar": {

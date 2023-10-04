@@ -6,12 +6,13 @@ export default function Posts({
 }: {
   params: { locale: Locale };
 }) {
+  const dict = useTranslations("App.Posts");
   return (
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl">
           <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-            Latest Posts
+            {dict("latest_posts")}
           </h2>
           <div className="mt-10 space-y-16 border-t border-gray-200 pt-10 sm:mt-16 sm:pt-16">
             <PostList locale={locale} />
