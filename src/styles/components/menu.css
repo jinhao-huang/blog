@@ -1,0 +1,35 @@
+.react-aria-Popover {
+    &[data-entering] {
+        animation: popover 100ms ease-out;
+    }
+
+    &[data-exiting] {
+        animation: popover 75ms reverse ease-in;
+    }
+}
+
+@keyframes popover {
+    from {
+        opacity: 0;
+        scale: 0.95;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.react-aria-Menu {
+    @apply origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5;
+
+    &:focus {
+        @apply outline-none;
+    }
+    .react-aria-Item {
+        @apply text-gray-700 block px-4 py-2 text-sm cursor-pointer;
+        &[data-focused] {
+            @apply text-gray-900 bg-gray-100;
+        }
+    }
+}

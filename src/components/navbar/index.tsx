@@ -1,6 +1,7 @@
 import { FaGlobe } from "react-icons/fa";
 import MobileDialog from "./mobile-dialog";
 import { useTranslations } from "next-intl";
+import LanguageButton from "@/components/navbar/language-button";
 
 export default function Navbar() {
   const dict = useTranslations("Components.Navbar");
@@ -36,13 +37,9 @@ export default function Navbar() {
           ))}
         </div>
         <div className="flex flex-1 justify-end gap-4">
-          <button
-            type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-400"
-          >
-            <span className="sr-only">{dict("Aria.switch_language")}</span>
-            <FaGlobe className="h-6 w-6"></FaGlobe>
-          </button>
+          <LanguageButton
+            aria_dict={{ switch_language: dict("Aria.switch_language") }}
+          ></LanguageButton>
           <div className="flex lg:hidden">
             <MobileDialog
               navigations={navigations}
