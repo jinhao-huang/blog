@@ -21,7 +21,7 @@ export default function LanguageButton({
     <MenuTrigger>
       <Button
         aria-label="Menu"
-        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-400"
+        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-300"
       >
         <span className="sr-only">{aria_dict.switch_language}</span>
         <FaGlobe className="h-6 w-6"></FaGlobe>

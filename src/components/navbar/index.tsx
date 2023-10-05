@@ -10,9 +10,9 @@ export default function Navbar() {
     { name: dict("about"), href: "/about" },
   ];
   return (
-    <header className="bg-white dark:bg-gray-900">
+    <header className="bg-white dark:bg-gray-950">
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 border-b border-b-gray-200"
+        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 border-b border-b-gray-200 dark:border-b-gray-800"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
@@ -30,7 +30,7 @@ export default function Navbar() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 text-gray-900 dark:text-white"
+              className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-100"
             >
               {item.name}
             </Link>
