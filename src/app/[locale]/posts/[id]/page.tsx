@@ -10,13 +10,9 @@ export default async function Post({
 }) {
   const post = await getPost(locale, id);
   if (!post) notFound();
-  return <PostBody>{post.body}</PostBody>;
-}
-
-export function PostBody({ children }: { children: string }) {
   return (
     <MDXRemote
-      source={children}
+      source={post.body}
       options={{
         mdxOptions: {
           remarkPlugins: [],
