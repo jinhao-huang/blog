@@ -1,4 +1,3 @@
-import { FaGlobe } from "react-icons/fa";
 import MobileDialog from "./mobile-dialog";
 import { useTranslations } from "next-intl";
 import LanguageButton from "@/components/navbar/language-button";
