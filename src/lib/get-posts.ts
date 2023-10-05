@@ -11,9 +11,10 @@ export const getPosts = cache(async (locale: Locale) => {
 
   return Promise.all(
     posts
-      .filter((file) => path.extname(file) === ".mdx")
-      .map(async (file) => {
-        const filePath = `${dir}${file}`;
+      .filter((fileName) => path.extname(fileName) === ".mdx")
+      .map(async (fileName) => {
+        const filePath = `${dir}${fileName}`;
+        const id = fileName.replace(/\.mdx$/, "");
         const postContent = await fs.readFile(filePath, "utf8");
         const { data, content } = matter(postContent);
 
@@ -21,7 +22,7 @@ export const getPosts = cache(async (locale: Locale) => {
           return null;
         }
 
-        return { ...data, id: file, body: content } as Post;
+        return { ...data, id: id, body: content } as Post;
       })
       .filter((post) => post !== null) as Promise<Post>[],
   );
