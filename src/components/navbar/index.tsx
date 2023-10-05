@@ -1,12 +1,13 @@
 import MobileDialog from "./mobile-dialog";
 import { useTranslations } from "next-intl";
 import LanguageButton from "@/components/navbar/language-button";
+import Link from "next-intl/link";
 
 export default function Navbar() {
   const dict = useTranslations("Components.Navbar");
   const navigations = [
-    { name: dict("posts"), href: "#" },
-    { name: dict("about"), href: "#" },
+    { name: dict("posts"), href: "/posts" },
+    { name: dict("about"), href: "/about" },
   ];
   return (
     <header className="bg-white dark:bg-gray-900">
@@ -26,13 +27,13 @@ export default function Navbar() {
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
           {navigations.map((item) => (
-            <a
+            <Link
               key={item.name}
               href={item.href}
               className="text-sm font-semibold leading-6 text-gray-900 dark:text-white"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </div>
         <div className="flex flex-1 justify-end gap-4">
