@@ -28,8 +28,24 @@
     }
     .react-aria-Item {
         @apply text-gray-700 block px-4 py-2 text-sm cursor-pointer;
+
         &[data-focused] {
             @apply text-gray-900 bg-gray-100;
         }
     }
+}
+
+[data-theme='dark'] {
+    .react-aria-Menu {
+        @apply bg-gray-800;
+    }
+
+    .react-aria-Item {
+        @apply text-gray-200;
+
+        &[data-focused] {
+            @apply text-white bg-gray-700;
+        }
+    }
+
 }
