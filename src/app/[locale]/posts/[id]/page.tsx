@@ -12,3 +12,16 @@ export default async function Post({
   if (!post) notFound();
   return <ContentBody>{post.body}</ContentBody>;
 }
+
+export async function generateMetadata({
+  params: { locale, id },
+}: {
+  params: { locale: Locale; id: string };
+}) {
+  const post = await getPost(locale, id);
+  if (!post) notFound();
+  return {
+    title: post.title,
+    description: post.description,
+  };
+}
