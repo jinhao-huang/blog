@@ -8,10 +8,16 @@
     "Navbar": {
       "posts": "Posts",
       "about": "About",
+      "ThemeButton": {
+        "system": "System",
+        "light": "Light",
+        "dark": "Dark"
+      },
       "Aria": {
         "open_menu": "Open menu",
         "close_menu": "Close menu",
-        "switch_language": "Switch language"
+        "switch_language": "Switch language",
+        "switch_theme": "Switch theme"
       }
     }
   }

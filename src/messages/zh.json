@@ -8,10 +8,16 @@
     "Navbar": {
       "posts": "文章",
       "about": "关于",
+      "ThemeButton": {
+        "system": "系统",
+        "light": "白天",
+        "dark": "黑夜"
+      },
       "Aria": {
         "open_menu": "打开菜单",
         "close_menu": "关闭菜单",
-        "switch_language": "切换语言"
+        "switch_language": "切换语言",
+        "switch_theme": "切换主题"
       }
     }
   }

@@ -2,6 +2,7 @@ import MobileDialog from "./mobile-dialog";
 import { useTranslations } from "next-intl";
 import LanguageButton from "@/components/navbar/language-button";
 import Link from "next-intl/link";
+import ThemeButton from "@/components/navbar/theme-button";
 
 export default function Navbar() {
   const dict = useTranslations("Components.Navbar");
@@ -33,6 +34,14 @@ export default function Navbar() {
           ))}
         </div>
         <div className="flex flex-1 justify-end gap-4">
+          <ThemeButton
+            dict={{
+              system: dict("ThemeButton.system"),
+              light: dict("ThemeButton.light"),
+              dark: dict("ThemeButton.dark"),
+            }}
+            aria_dict={{ switch_theme: dict("Aria.switch_theme") }}
+          ></ThemeButton>
           <LanguageButton
             aria_dict={{ switch_language: dict("Aria.switch_language") }}
           ></LanguageButton>
