@@ -5,8 +5,9 @@ import { cache } from "react";
 import { Locale } from "@/i18n";
 import { Content, Post } from "./content";
 
-const getContents = cache(async (locale: Locale, category: string) => {
-  const dir = path.join(process.cwd(), `/contents/${category}/${locale}/`);
+const getContents = cache(async (locale: Locale, category?: string) => {
+  const categoryPath = category ? `${category}/` : "";
+  const dir = path.join(process.cwd(), `/contents/${locale}/${categoryPath}`);
   const contents = await fs.readdir(dir);
   return Promise.all(
     contents
@@ -20,6 +21,11 @@ const getContents = cache(async (locale: Locale, category: string) => {
       }),
   );
 });
+
+export async function getContent(locale: Locale, id: string) {
+  const contents = await getContents(locale);
+  return contents.find((content) => content.id === id);
+}
 
 export async function getPosts(locale: Locale) {
   const contents = (await getContents(locale, "posts")) as Post[];
