@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import getPosts from "@/lib/get-posts";
+import { getPosts } from "@/lib/get-contents";
 import { Locale } from "@/i18n";
 import RelativeLink from "@/components/relative-link";
 export default function Posts({

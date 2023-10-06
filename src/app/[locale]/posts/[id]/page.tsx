@@ -1,5 +1,5 @@
 import { Locale } from "@/i18n";
-import { getPost } from "@/lib/get-posts";
+import { getPost } from "@/lib/get-contents";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 
