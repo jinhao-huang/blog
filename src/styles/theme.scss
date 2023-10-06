@@ -1,1 +1,9 @@
 @import "./components/menu";
+
+:root {
+  @apply bg-white;
+}
+
+[data-theme='dark'] {
+  @apply bg-gray-950;
+}
