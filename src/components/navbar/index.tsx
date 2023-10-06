@@ -18,11 +18,7 @@ export default function Navbar() {
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">1BitBool</span>
-            <img
-              className="h-8 w-auto"
-              src="/assets/vercel.svg"
-              alt="1BitBool"
-            />
+            <img className="h-8 w-auto" src="/assets/logo.svg" alt="1BitBool" />
           </a>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">

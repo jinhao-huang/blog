@@ -35,7 +35,7 @@ export default function MobileDialog({
                   <span className="sr-only">1BitBool</span>
                   <img
                     className="h-8 w-auto"
-                    src="/assets/vercel.svg"
+                    src="/assets/logo.svg"
                     alt="1BitBool"
                   />
                 </a>
