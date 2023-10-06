@@ -32,8 +32,8 @@ export default function LanguageButton({
             router.replace(pathname, { locale: String(key) });
           }}
         >
-          <Item id="zh">中文</Item>
           <Item id="en">English</Item>
+          <Item id="zh">中文</Item>
         </Menu>
       </Popover>
     </MenuTrigger>
