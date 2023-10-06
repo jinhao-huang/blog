@@ -8,5 +8,6 @@ const config: Config = {
   ],
   theme: {},
   plugins: [require("@tailwindcss/typography"), require("tailwindcss-animate")],
+  darkMode: ["class", '[data-theme="dark"]'],
 };
 export default config;
