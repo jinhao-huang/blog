@@ -45,6 +45,7 @@
 
         &[data-focused] {
             @apply text-white bg-gray-700;
+            border-radius: inherit;
         }
     }
 
