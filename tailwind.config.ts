@@ -6,7 +6,16 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  theme: {},
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: "var(--color-primary)",
+          base: "var(--color-primary-base)",
+        },
+      },
+    },
+  },
   plugins: [require("@tailwindcss/typography"), require("tailwindcss-animate")],
   darkMode: ["class", '[data-theme="dark"]'],
 };

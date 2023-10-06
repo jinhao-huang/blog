@@ -11,7 +11,7 @@ export default function Navbar() {
     { name: dict("about"), href: "/about" },
   ];
   return (
-    <header className="bg-white dark:bg-gray-950">
+    <header>
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 border-b border-b-gray-200 dark:border-b-gray-800"
         aria-label="Global"

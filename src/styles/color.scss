@@ -1,0 +1,11 @@
+@layer color {
+  :root {
+    --color-primary: theme('colors.gray.900');
+    --color-primary-base: theme('colors.white');
+  }
+
+  [data-theme='dark'] {
+    --color-primary: theme('colors.gray.100');
+    --color-primary-base: theme('colors.gray.950');
+  }
+}
