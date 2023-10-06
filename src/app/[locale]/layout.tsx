@@ -27,11 +27,13 @@ export default function RootLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={inter.className}>
-        <Providers>
-          <Navbar></Navbar>
-          {children}
-          <Footer></Footer>
-        </Providers>
+        <div className="min-h-screen relative">
+          <Providers>
+            <Navbar></Navbar>
+            {children}
+            <Footer></Footer>
+          </Providers>
+        </div>
       </body>
     </html>
   );
