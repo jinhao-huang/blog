@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar";
 import { i18n, Locale } from "@/i18n";
 import { notFound } from "next/navigation";
 import { Providers } from "@/app/[locale]/providers";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -29,6 +30,7 @@ export default function RootLayout({
         <Providers>
           <Navbar></Navbar>
           {children}
+          <Footer></Footer>
         </Providers>
       </body>
     </html>
