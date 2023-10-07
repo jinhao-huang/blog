@@ -44,7 +44,7 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-export function PageCard({
+function PageCard({
   pages,
 }: {
   pages: {
