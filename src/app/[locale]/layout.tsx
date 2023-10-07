@@ -6,6 +6,7 @@ import { i18n, Locale } from "@/i18n";
 import { notFound } from "next/navigation";
 import { Providers } from "@/app/[locale]/providers";
 import Footer from "@/components/footer";
+import { unstable_setRequestLocale } from "next-intl/server";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
 }) {
   const isValidLocale = i18n.locales.some((cur) => cur === locale);
   if (!isValidLocale) notFound();
+  unstable_setRequestLocale(locale);
 
   return (
     <html lang={locale} suppressHydrationWarning>
@@ -37,4 +39,8 @@ export default function RootLayout({
       </body>
     </html>
   );
+}
+
+export function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ locale }));
 }

@@ -1,13 +1,19 @@
 import { useTranslations } from "next-intl";
 import { getPosts } from "@/lib/get-contents";
-import { Locale } from "@/i18n";
+import { i18n, Locale } from "@/i18n";
 import RelativeLink from "@/components/relative-link";
+import { notFound } from "next/navigation";
+import { unstable_setRequestLocale } from "next-intl/server";
 export default function Posts({
   params: { locale },
 }: {
   params: { locale: Locale };
 }) {
+  const isValidLocale = i18n.locales.some((cur) => cur === locale);
+  if (!isValidLocale) notFound();
+  unstable_setRequestLocale(locale);
   const dict = useTranslations("App.Posts");
+
   return (
     <div className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
