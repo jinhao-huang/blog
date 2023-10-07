@@ -1,8 +1,8 @@
 import createMiddleware from "next-intl/middleware";
 import { i18n } from "@/i18n";
 
+// Middleware will be deactivated in static export
 export default createMiddleware({
-  // A list of all locales that are supported
   locales: i18n.locales,
 
   defaultLocale: i18n.defaultLocale,
