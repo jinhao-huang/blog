@@ -12,6 +12,8 @@ const config: Config = {
         primary: {
           DEFAULT: "var(--color-primary)",
           base: "var(--color-primary-base)",
+          1: "var(--color-primary-1)",
+          2: "var(--color-primary-2)",
         },
       },
     },
