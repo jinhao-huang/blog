@@ -28,7 +28,9 @@ export default function RootLayout({
         <div className="min-h-screen relative">
           <Providers>
             <Navbar></Navbar>
-            {children}
+            <main className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+              {children}
+            </main>
             <Footer></Footer>
           </Providers>
         </div>

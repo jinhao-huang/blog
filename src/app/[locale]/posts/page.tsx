@@ -12,16 +12,12 @@ export default function Posts({
   const dict = useTranslations("App.Posts");
 
   return (
-    <div className="py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl">
-          <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl dark:text-white">
-            {dict("latest_posts")}
-          </h2>
-          <div className="mt-10 space-y-16 border-t border-gray-200 dark:border-gray-700 pt-10 sm:mt-16 sm:pt-16">
-            <PostList locale={locale} />
-          </div>
-        </div>
+    <div className="mx-auto max-w-2xl">
+      <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl dark:text-white">
+        {dict("latest_posts")}
+      </h2>
+      <div className="mt-10 space-y-16 border-t border-gray-200 dark:border-gray-700 pt-10 sm:mt-16 sm:pt-16">
+        <PostList locale={locale} />
       </div>
     </div>
   );
