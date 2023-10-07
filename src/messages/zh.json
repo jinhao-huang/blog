@@ -1,5 +1,17 @@
 {
   "App": {
+    "welcome": "这里是 1BitBool 的博客",
+    "prompt": "你可以访问下面的页面",
+    "pages": {
+      "posts": {
+        "title": "文章",
+        "description": "文章列表"
+      },
+      "about": {
+        "title": "关于",
+        "description": "关于我"
+      }
+    },
     "Posts": {
       "latest_posts": "最新文章"
     }
