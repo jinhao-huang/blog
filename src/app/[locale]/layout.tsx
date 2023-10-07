@@ -2,11 +2,9 @@ import "./globals.scss";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/navbar";
-import { i18n, Locale } from "@/i18n";
-import { notFound } from "next/navigation";
+import { i18n, Locale, validateLocale } from "@/i18n";
 import { Providers } from "@/app/[locale]/providers";
 import Footer from "@/components/footer";
-import { unstable_setRequestLocale } from "next-intl/server";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,9 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
   params: { locale: Locale };
 }) {
-  const isValidLocale = i18n.locales.some((cur) => cur === locale);
-  if (!isValidLocale) notFound();
-  unstable_setRequestLocale(locale);
+  validateLocale(locale);
 
   return (
     <html lang={locale} suppressHydrationWarning>
