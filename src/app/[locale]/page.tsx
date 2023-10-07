@@ -17,16 +17,16 @@ export default function Home({
       description: dict("pages.posts.description"),
       href: "/posts",
       icon: TbArticle,
-      iconForeground: "text-teal-700",
-      iconBackground: "bg-teal-50",
+      iconForeground: "text-teal-700 dark:text-teal-400",
+      iconBackground: "bg-teal-50 dark:bg-teal-900",
     },
     {
       title: dict("pages.about.title"),
       description: dict("pages.about.description"),
       href: "/about",
       icon: TbUser,
-      iconForeground: "text-purple-700",
-      iconBackground: "bg-purple-50",
+      iconForeground: "text-purple-700 dark:text-purple-400",
+      iconBackground: "bg-purple-50 dark:bg-purple-900",
     },
   ];
   return (
@@ -57,7 +57,7 @@ export function PageCard({
   }[];
 }) {
   return (
-    <div className="divide-y divide-gray-200 overflow-hidden rounded-lg bg-gray-200 shadow sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0">
+    <div className="divide-y divide-gray-200 dark:divide-gray-700 overflow-hidden rounded-lg bg-gray-200 dark:bg-gray-700 shadow dark:outline dark:outline-gray-700 sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0">
       {pages.map((action, actionIdx) => (
         <div
           key={action.title}
@@ -70,7 +70,7 @@ export function PageCard({
             actionIdx === pages.length - 1
               ? "rounded-bl-lg rounded-br-lg sm:rounded-bl-none"
               : "",
-            "group relative bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500",
+            "group relative bg-primary-base p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-500 dark:focus-within:ring-indigo-400",
           )}
         >
           <div>
@@ -78,24 +78,24 @@ export function PageCard({
               className={classNames(
                 action.iconBackground,
                 action.iconForeground,
-                "inline-flex rounded-lg p-3 ring-4 ring-white",
+                "inline-flex rounded-lg p-3 ring-4 ring-primary-base",
               )}
             >
               <action.icon className="h-6 w-6" aria-hidden="true" />
             </span>
           </div>
           <div className="mt-8">
-            <h3 className="text-base font-semibold leading-6 text-gray-900">
+            <h3 className="text-base font-semibold leading-6 text-primary">
               <Link href={action.href} className="focus:outline-none">
                 {/* Extend touch target to entire panel */}
                 <span className="absolute inset-0" aria-hidden="true" />
                 {action.title}
               </Link>
             </h3>
-            <p className="mt-2 text-sm text-gray-500">{action.description}</p>
+            <p className="mt-2 text-sm text-primary-2">{action.description}</p>
           </div>
           <span
-            className="pointer-events-none absolute right-6 top-6 text-gray-300 group-hover:text-gray-400"
+            className="pointer-events-none absolute right-6 top-6 text-gray-300 group-hover:text-gray-500 dark:text-gray-600 dark:group-hover:text-gray-400"
             aria-hidden="true"
           >
             <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
