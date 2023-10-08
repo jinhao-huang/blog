@@ -4,6 +4,7 @@ import {
   HiOutlineBars3 as Bars3Icon,
   HiOutlineXMark as XMarkIcon,
 } from "react-icons/hi2";
+import Link from "next-intl/link";
 
 export default function MobileDialog({
   navigations,
@@ -31,14 +32,14 @@ export default function MobileDialog({
           {({ close }) => (
             <>
               <div className="flex items-center justify-between">
-                <a href="#" className="-m-1.5 p-1.5">
+                <Link href="/" className="-m-1.5 p-1.5">
                   <span className="sr-only">1BitBool</span>
                   <img
                     className="h-8 w-auto"
                     src="/assets/logo.svg"
                     alt="1BitBool"
                   />
-                </a>
+                </Link>
                 <Button
                   type="button"
                   className="-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-gray-400"
@@ -52,13 +53,13 @@ export default function MobileDialog({
                 <div className="-my-6 divide-y divide-gray-500/10 dark:divide-gray-500/25">
                   <div className="space-y-2 py-6">
                     {navigations.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
                         href={item.href}
                         className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 dark:text-white dark:hover:bg-gray-800"
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
