@@ -21,7 +21,7 @@ const navigation = [
 
 export default function Footer() {
   return (
-    <footer className="absolute bottom-0 flex h-48 w-full flex-col items-center justify-center lg:h-32">
+    <footer className="absolute bottom-0 flex h-48 w-full flex-col items-center justify-center md:h-32">
       <div className="w-full max-w-7xl px-6 md:flex md:items-center md:justify-between lg:px-8">
         <div className="flex justify-center space-x-6 md:order-2">
           {navigation.map((item) => (

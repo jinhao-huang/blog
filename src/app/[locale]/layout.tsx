@@ -17,7 +17,7 @@ export default function HomeLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={`${inter.className} lg:pb-32} relative min-h-screen pb-48`}
+        className={`${inter.className} relative min-h-screen pb-48 md:pb-32`}
       >
         <Providers>
           <Navbar></Navbar>
