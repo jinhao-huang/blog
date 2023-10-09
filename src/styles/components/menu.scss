@@ -1,52 +1,51 @@
 .react-aria-Popover {
-    &[data-entering] {
-        animation: popover 100ms ease-out;
-    }
+  &[data-entering] {
+    animation: popover 100ms ease-out;
+  }
 
-    &[data-exiting] {
-        animation: popover 75ms reverse ease-in;
-    }
+  &[data-exiting] {
+    animation: popover 75ms reverse ease-in;
+  }
 }
 
 @keyframes popover {
-    from {
-        opacity: 0;
-        scale: 0.95;
-    }
+  from {
+    opacity: 0;
+    scale: 0.95;
+  }
 
-    to {
-        opacity: 1;
-        scale: 1;
-    }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
 }
 
 .react-aria-Menu {
-    @apply origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5;
+  @apply origin-top-left rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5;
 
-    &:focus {
-        @apply outline-none;
-    }
-    .react-aria-Item {
-        @apply text-gray-700 block px-4 py-2 text-sm cursor-pointer;
+  &:focus {
+    @apply outline-none;
+  }
+  .react-aria-Item {
+    @apply block cursor-pointer px-4 py-2 text-sm text-gray-700;
 
-        &[data-focused] {
-            @apply text-gray-900 bg-gray-100;
-        }
+    &[data-focused] {
+      @apply bg-gray-100 text-gray-900;
     }
+  }
 }
 
-[data-theme='dark'] {
-    .react-aria-Menu {
-        @apply bg-gray-800;
+[data-theme="dark"] {
+  .react-aria-Menu {
+    @apply bg-gray-800;
+  }
+
+  .react-aria-Item {
+    @apply text-gray-200;
+
+    &[data-focused] {
+      @apply bg-gray-700 text-white;
+      border-radius: inherit;
     }
-
-    .react-aria-Item {
-        @apply text-gray-200;
-
-        &[data-focused] {
-            @apply text-white bg-gray-700;
-            border-radius: inherit;
-        }
-    }
-
+  }
 }
