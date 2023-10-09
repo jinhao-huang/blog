@@ -31,7 +31,7 @@ export default function Home({
   ];
   return (
     <>
-      <article className="prose dark:prose-invert pb-6">
+      <article className="prose pb-6 dark:prose-invert">
         <p>{dict("welcome")}</p>
         <p>{dict("prompt")}</p>
       </article>
@@ -57,7 +57,7 @@ function PageCard({
   }[];
 }) {
   return (
-    <div className="divide-y divide-gray-200 dark:divide-gray-700 overflow-hidden rounded-lg bg-gray-200 dark:bg-gray-700 shadow dark:outline dark:outline-gray-700 sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0">
+    <div className="divide-y divide-gray-200 overflow-hidden rounded-lg bg-gray-200 shadow dark:divide-gray-700 dark:bg-gray-700 dark:outline dark:outline-gray-700 sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0">
       {pages.map((action, actionIdx) => (
         <div
           key={action.title}

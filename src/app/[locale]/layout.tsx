@@ -17,11 +17,11 @@ export default function HomeLayout({
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
-        className={`${inter.className} min-h-screen relative pb-48 lg:pb-32}`}
+        className={`${inter.className} lg:pb-32} relative min-h-screen pb-48`}
       >
         <Providers>
           <Navbar></Navbar>
-          <main className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+          <main className="mx-auto max-w-4xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
             {children}
           </main>
           <Footer></Footer>

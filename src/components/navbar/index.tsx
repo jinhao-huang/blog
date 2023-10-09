@@ -13,7 +13,7 @@ export default function Navbar() {
   return (
     <header>
       <nav
-        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8 border-b border-b-gray-200 dark:border-b-gray-800"
+        className="mx-auto flex max-w-7xl items-center justify-between border-b border-b-gray-200 p-6 dark:border-b-gray-800 lg:px-8"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
