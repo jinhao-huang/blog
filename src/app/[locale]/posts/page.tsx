@@ -13,9 +13,9 @@ export default function Posts({
 
   return (
     <div className="mx-auto max-w-2xl">
-      <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">
+      <h1 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl">
         {dict("latest_posts")}
-      </h2>
+      </h1>
       <div className="mt-10 space-y-16 border-t border-gray-200 pt-10 dark:border-gray-700 sm:mt-16 sm:pt-16">
         <PostList locale={locale} />
       </div>
@@ -44,12 +44,12 @@ async function PostList({ locale }: { locale: Locale }) {
         ))}
       </div>
       <div className="group relative">
-        <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600 dark:text-gray-100">
+        <h2 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600 dark:text-gray-100">
           <RelativeLink href={post.id}>
             <span className="absolute inset-0" />
             {post.title}
           </RelativeLink>
-        </h3>
+        </h2>
         <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600 dark:text-gray-400">
           {post.description}
         </p>
