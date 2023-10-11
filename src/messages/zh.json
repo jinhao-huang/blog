@@ -1,8 +1,9 @@
 {
   "App": {
-    "welcome": "这里是 1BitBool 的博客",
+    "welcome": "欢迎来到 1BitBool 的博客",
+    "pages": "网站",
     "prompt": "你可以访问下面的页面",
-    "pages": {
+    "pages_": {
       "posts": {
         "title": "文章",
         "description": "文章列表"

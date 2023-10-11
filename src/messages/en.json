@@ -1,8 +1,9 @@
 {
   "App": {
-    "welcome": "This is 1BitBool's Blog!",
+    "welcome": "Welcome to 1BitBool's Blog!",
+    "pages": "Pages",
     "prompt": "You can go to following pages:",
-    "pages": {
+    "pages_": {
       "posts": {
         "title": "Posts",
         "description": "My all posts"

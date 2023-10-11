@@ -13,16 +13,16 @@ export default function Home({
   const dict = useTranslations("App");
   const pages = [
     {
-      title: dict("pages.posts.title"),
-      description: dict("pages.posts.description"),
+      title: dict("pages_.posts.title"),
+      description: dict("pages_.posts.description"),
       href: "/posts",
       icon: TbArticle,
       iconForeground: "text-teal-700 dark:text-teal-400",
       iconBackground: "bg-teal-50 dark:bg-teal-900",
     },
     {
-      title: dict("pages.about.title"),
-      description: dict("pages.about.description"),
+      title: dict("pages_.about.title"),
+      description: dict("pages_.about.description"),
       href: "/about",
       icon: TbUser,
       iconForeground: "text-purple-700 dark:text-purple-400",
@@ -32,7 +32,8 @@ export default function Home({
   return (
     <>
       <article className="prose pb-6 dark:prose-invert">
-        <p>{dict("welcome")}</p>
+        <h1>{dict("welcome")}</h1>
+        <h2>{dict("pages")}</h2>
         <p>{dict("prompt")}</p>
       </article>
       <PageCard pages={pages}></PageCard>
