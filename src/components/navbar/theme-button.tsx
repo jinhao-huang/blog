@@ -44,10 +44,7 @@ export default function ThemeButton({
     );
   return (
     <MenuTrigger>
-      <Button
-        aria-label="Menu"
-        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-300"
-      >
+      <Button className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-300">
         <span className="sr-only">{aria_dict.switch_theme}</span>
         {icon}
       </Button>
