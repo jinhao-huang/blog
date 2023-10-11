@@ -15,6 +15,7 @@ export default function Navbar() {
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between border-b border-b-gray-200 p-6 dark:border-b-gray-800 lg:px-8"
         aria-label="Navbar"
+        role="navigation"
       >
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
