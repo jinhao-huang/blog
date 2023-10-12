@@ -9,6 +9,7 @@ import {
 import { TbWorld } from "react-icons/tb";
 import { usePathname, useRouter } from "next-intl/client";
 import { Key } from "react";
+import { localeTranslations } from "@/i18n";
 
 export default function LanguageButton({
   aria_dict,
@@ -29,8 +30,11 @@ export default function LanguageButton({
             router.replace(pathname, { locale: String(key) });
           }}
         >
-          <Item id="en">English</Item>
-          <Item id="zh">中文</Item>
+          {Object.entries(localeTranslations).map(([key, language]) => (
+            <Item key={key} id={key}>
+              {language}
+            </Item>
+          ))}
         </Menu>
       </Popover>
     </MenuTrigger>

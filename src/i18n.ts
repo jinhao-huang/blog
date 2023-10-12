@@ -8,6 +8,15 @@ export const i18n = {
 
 export type Locale = (typeof i18n)["locales"][number];
 
+type Translations = {
+  [key in Locale]: string;
+};
+
+export const localeTranslations: Translations = {
+  en: "English",
+  zh: "简体中文",
+};
+
 export default getRequestConfig(async ({ locale }) => ({
   messages: (await import(`./messages/${locale}.json`)).default,
 }));
