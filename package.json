@@ -19,6 +19,7 @@
     "next": "latest",
     "next-intl": "3.0.0-beta.19",
     "next-mdx-remote": "^4.4.1",
+    "next-sitemap": "^4.2.3",
     "next-themes": "^0.2.1",
     "react": "latest",
     "react-aria-components": "1.0.0-beta.0",
