@@ -1,5 +1,5 @@
 import { Locale, validateLocale } from "@/i18n";
-import { getPost, getPosts } from "@/lib/get-contents";
+import { getLocalesOfPost, getPost, getPosts } from "@/lib/get-contents";
 import { notFound } from "next/navigation";
 import ContentBody from "@/components/content-body";
 
@@ -11,7 +11,9 @@ export default async function Post({
   validateLocale(locale);
   const post = await getPost(locale, id);
   if (!post) notFound();
-  return <ContentBody>{post.body}</ContentBody>;
+  const locales = (await getLocalesOfPost(post.id)).filter((l) => l !== locale);
+
+  return <ContentBody locales={locales}>{post.body}</ContentBody>;
 }
 
 export async function generateMetadata({

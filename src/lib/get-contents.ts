@@ -2,7 +2,7 @@ import matter from "gray-matter";
 import path from "path";
 import fs from "fs/promises";
 import { cache } from "react";
-import { Locale } from "@/i18n";
+import { i18n, Locale } from "@/i18n";
 import { Content, Post } from "./content";
 
 const getContents = cache(async (locale: Locale, category?: string) => {
@@ -35,4 +35,15 @@ export async function getPosts(locale: Locale) {
 export async function getPost(locale: Locale, id: string) {
   const posts = await getPosts(locale);
   return posts.find((post) => post.id === id);
+}
+
+export async function getLocalesOfPost(id: string) {
+  let locales: Locale[] = [];
+  for (const locale of i18n.locales) {
+    const post = await getPost(locale, id);
+    if (post) {
+      locales.push(locale);
+    }
+  }
+  return locales;
 }

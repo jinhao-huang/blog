@@ -10,5 +10,5 @@ export default async function About({
 }) {
   const content = await getContent(locale, "about");
   if (!content) notFound();
-  return <ContentBody>{content.body}</ContentBody>;
+  return <ContentBody locales={[]}>{content.body}</ContentBody>;
 }
