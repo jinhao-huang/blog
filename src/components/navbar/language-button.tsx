@@ -8,7 +8,7 @@ import {
 } from "react-aria-components";
 import { TbWorld } from "react-icons/tb";
 import { usePathname, useRouter } from "next-intl/client";
-import { Key } from "react";
+import { Key, useEffect, useState } from "react";
 import { localeTranslations } from "@/i18n";
 
 export default function LanguageButton({
@@ -16,8 +16,16 @@ export default function LanguageButton({
 }: {
   aria_dict: { switch_language: string };
 }) {
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
   return (
     <MenuTrigger>
       <Button className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-300">
