@@ -35,13 +35,7 @@ export async function getPosts(locale: Locale) {
   return contents
     .filter((post) => post.published)
     .sort((a, b) => {
-      if (a.date < b.date) {
-        return 1;
-      } else if (a.date > b.date) {
-        return -1;
-      } else {
-        return 0;
-      }
+      return b.date.getTime() - a.date.getTime();
     });
 }
 
