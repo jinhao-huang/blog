@@ -1,6 +1,6 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Locale } from "@/i18n";
-import { PostLanguageLinks } from "@/components/post-language-links";
+import { PostLanguageLinks } from "./post-language-links";
 
 export default function ContentBody({
   children,
