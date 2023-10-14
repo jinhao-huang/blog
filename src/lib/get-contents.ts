@@ -32,7 +32,17 @@ export async function getContent(locale: Locale, id: string) {
 
 export async function getPosts(locale: Locale) {
   const contents = (await getContents(locale, "posts")) as Post[];
-  return contents.filter((post) => post.published);
+  return contents
+    .filter((post) => post.published)
+    .sort((a, b) => {
+      if (a.date < b.date) {
+        return 1;
+      } else if (a.date > b.date) {
+        return -1;
+      } else {
+        return 0;
+      }
+    });
 }
 
 export async function getPost(locale: Locale, id: string) {
