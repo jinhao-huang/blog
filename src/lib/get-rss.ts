@@ -4,7 +4,7 @@ import { Feed } from "feed";
 import { rssConfig, siteConfig } from "@/metaConfig";
 import { getPosts } from "@/lib/get-contents";
 
-export async function generateRSS(locale: Locale) {
+export async function getRss(locale: Locale) {
   const renderer = new marked.Renderer();
   renderer.link = (href, _, text) =>
     `<a href="${href}" target="_blank" rel="noopener noreferrer">${text}</a>`;

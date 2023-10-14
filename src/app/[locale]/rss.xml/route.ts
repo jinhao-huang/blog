@@ -1,12 +1,12 @@
 import { i18n, Locale } from "@/i18n";
-import { generateRSS } from "@/scripts/generate-rss";
+import { getRss } from "@/lib/get-rss";
 
 export async function GET(
   request: Request,
   { params }: { params: { locale: Locale } },
 ) {
   const locale = params.locale;
-  const rssContent = await generateRSS(locale);
+  const rssContent = await getRss(locale);
   return new Response(rssContent, {
     headers: {
       "Content-Type": "application/atom+xml; charset=utf-8",
