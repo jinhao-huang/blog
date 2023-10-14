@@ -11,10 +11,13 @@ const getContents = cache(async (locale: Locale, category?: string) => {
   const contents = await fs.readdir(dir);
   return Promise.all(
     contents
-      .filter((fileName) => path.extname(fileName) === ".mdx")
+      .filter(
+        (fileName) =>
+          path.extname(fileName) === ".mdx" || path.extname(fileName) === ".md",
+      )
       .map(async (fileName): Promise<Content> => {
         const filePath = `${dir}${fileName}`;
-        const id = fileName.replace(/\.mdx$/, "");
+        const id = fileName.replace(/\.mdx$/, "").replace(/\.md$/, "");
         const file = await fs.readFile(filePath, "utf8");
         const { data, content } = matter(file);
         return { ...data, id: id, body: content };
