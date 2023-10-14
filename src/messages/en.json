@@ -1,4 +1,7 @@
 {
+  "Base": {
+    "date": "{baseDate, date, long}"
+  },
   "App": {
     "welcome": "Welcome to 1BitBool's Blog!",
     "pages": "Pages",

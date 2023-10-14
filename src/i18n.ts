@@ -19,6 +19,7 @@ export const localeTranslations: Translations = {
 
 export default getRequestConfig(async ({ locale }) => ({
   messages: (await import(`./messages/${locale}.json`)).default,
+  timeZone: "UTC",
 }));
 
 export function validateLocale(locale: string) {

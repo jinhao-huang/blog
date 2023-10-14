@@ -5,7 +5,7 @@ export interface Content {
 
 export interface Post extends Content {
   title: string;
-  date: string;
+  date: Date;
   tags: string[];
   description: string;
   published: boolean;

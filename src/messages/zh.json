@@ -1,4 +1,7 @@
 {
+  "Base": {
+    "date": "{baseDate, date, long}"
+  },
   "App": {
     "welcome": "欢迎来到 1BitBool 的博客",
     "pages": "网站",

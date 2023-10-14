@@ -10,6 +10,7 @@ export default function Posts({
 }) {
   validateLocale(locale);
   const dict = useTranslations("App.Posts");
+  const baseDict = useTranslations("Base");
 
   return (
     <div className="mx-auto max-w-2xl">
@@ -17,13 +18,19 @@ export default function Posts({
         {dict("latest_posts")}
       </h1>
       <div className="mt-10 space-y-16 border-t border-gray-200 pt-10 dark:border-gray-700 sm:mt-16 sm:pt-16">
-        <PostList locale={locale} />
+        <PostList locale={locale} baseDict={baseDict} />
       </div>
     </div>
   );
 }
 
-async function PostList({ locale }: { locale: Locale }) {
+async function PostList({
+  locale,
+  baseDict,
+}: {
+  locale: Locale;
+  baseDict: any;
+}) {
   const posts = await getPosts(locale);
   return posts.map((post) => (
     <article
@@ -31,8 +38,11 @@ async function PostList({ locale }: { locale: Locale }) {
       className="flex max-w-xl flex-col items-start justify-between"
     >
       <div className="flex items-center gap-x-4 text-xs">
-        <time dateTime={post.date} className="text-gray-500 dark:text-gray-400">
-          {post.date}
+        <time
+          dateTime={post.date.toISOString()}
+          className="text-gray-500 dark:text-gray-400"
+        >
+          {baseDict("date", { baseDate: post.date })}
         </time>
         {post.tags.map((tag) => (
           <a
