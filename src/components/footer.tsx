@@ -33,7 +33,12 @@ export default function Footer({ locale }: { locale: Locale }) {
       <div className="w-full max-w-7xl px-6 md:flex md:items-center md:justify-between lg:px-8">
         <div className="flex justify-center space-x-6 md:order-2">
           {navigations.map((item) => (
-            <Link key={item.name} href={item.href} className="text-primary-2">
+            <Link
+              key={item.name}
+              href={item.href}
+              className="text-primary-2"
+              prefetch={false}
+            >
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
             </Link>
