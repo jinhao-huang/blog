@@ -24,14 +24,8 @@ export default function Posts({
   );
 }
 
-async function PostList({
-  locale,
-  baseDict,
-}: {
-  locale: Locale;
-  baseDict: any;
-}) {
-  const posts = await getPosts(locale);
+function PostList({ locale, baseDict }: { locale: Locale; baseDict: any }) {
+  const posts = getPosts(locale);
   return posts.map((post) => (
     <article
       key={post.id}

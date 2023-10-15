@@ -6,7 +6,7 @@ export async function GET(
   { params }: { params: { locale: Locale } },
 ) {
   const locale = params.locale;
-  const rssContent = await getRss(locale);
+  const rssContent = getRss(locale);
   return new Response(rssContent, {
     headers: {
       "Content-Type": "application/atom+xml; charset=utf-8",

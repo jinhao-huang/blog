@@ -4,7 +4,7 @@ import { Feed } from "feed";
 import { rssConfig, siteConfig } from "@/metaConfig";
 import { getPosts } from "@/lib/get-contents";
 
-export async function getRss(locale: Locale) {
+export function getRss(locale: Locale) {
   const renderer = new marked.Renderer();
   renderer.link = (href, _, text) =>
     `<a href="${href}" target="_blank" rel="noopener noreferrer">${text}</a>`;
@@ -15,7 +15,7 @@ export async function getRss(locale: Locale) {
   });
   const renderPost = (md: string) => marked.parse(md);
 
-  const posts = await getPosts(locale);
+  const posts = getPosts(locale);
   const feedOptions = rssConfig;
   feedOptions.language = locale;
   feedOptions.feed = `${siteConfig.bashURL}/${locale}/rss.xml`;
