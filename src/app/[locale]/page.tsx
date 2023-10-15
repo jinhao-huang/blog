@@ -58,7 +58,7 @@ function PageCard({
   }[];
 }) {
   return (
-    <div className="divide-y divide-gray-200 overflow-hidden rounded-lg bg-gray-200 shadow dark:divide-gray-700 dark:bg-gray-700 dark:outline dark:outline-gray-700 sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0">
+    <div className="divide-primary-3 dark:outline-primary-3 bg-primary-3 divide-y overflow-hidden rounded-lg shadow dark:outline sm:grid sm:grid-cols-2 sm:gap-px sm:divide-y-0">
       {pages.map((action, actionIdx) => (
         <div
           key={action.title}
@@ -93,10 +93,10 @@ function PageCard({
                 {action.title}
               </Link>
             </h3>
-            <p className="mt-2 text-sm text-primary-2">{action.description}</p>
+            <p className="mt-2 text-sm text-primary-1">{action.description}</p>
           </div>
           <span
-            className="pointer-events-none absolute right-6 top-6 text-gray-300 group-hover:text-gray-500 dark:text-gray-600 dark:group-hover:text-gray-400"
+            className="text-primary-3 pointer-events-none absolute right-6 top-6 group-hover:text-primary-2"
             aria-hidden="true"
           >
             <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">

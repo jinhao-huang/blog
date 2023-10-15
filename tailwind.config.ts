@@ -14,6 +14,7 @@ const config: Config = {
           base: "var(--color-primary-base)",
           1: "var(--color-primary-1)",
           2: "var(--color-primary-2)",
+          3: "var(--color-primary-3)",
         },
       },
     },
