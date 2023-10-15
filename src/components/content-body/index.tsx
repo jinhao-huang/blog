@@ -1,17 +1,22 @@
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Locale } from "@/i18n";
 import { PostLanguageLinks } from "./post-language-links";
+import { Post } from "@/lib/content";
+import { useTranslations } from "next-intl";
+import { getLocalesOfPost } from "@/lib/get-contents";
 
 export default function ContentBody({
   children,
-  locales,
+  post,
+  locale,
 }: {
   children: string;
-  locales: Locale[];
+  locale?: Locale;
+  post?: Post;
 }) {
   return (
     <article className="prose mx-auto dark:prose-invert">
-      <PostLanguageLinks locales={locales}></PostLanguageLinks>
+      <PostMetadata post={post} locale={locale}></PostMetadata>
       <MDXRemote
         source={children}
         options={{
@@ -22,5 +27,25 @@ export default function ContentBody({
         }}
       />
     </article>
+  );
+}
+
+function PostMetadata({ post, locale }: { post?: Post; locale?: Locale }) {
+  const baseDict = useTranslations("Base");
+  if (!post) return null;
+  const locales = locale
+    ? getLocalesOfPost(post.id).filter((l) => l !== locale)
+    : [];
+
+  return (
+    <>
+      <h1>{post.title}</h1>
+      <header>
+        <time dateTime={post.date.toISOString()} className="text-primary-2">
+          {baseDict("date", { baseDate: post.date })}
+        </time>
+        {locale && <PostLanguageLinks locales={locales}></PostLanguageLinks>}
+      </header>
+    </>
   );
 }

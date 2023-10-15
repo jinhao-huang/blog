@@ -18,7 +18,7 @@ export function PostLanguageLinks({ locales }: { locales: Locale[] }) {
     return null;
   }
   return (
-    <span>
+    <blockquote>
       This post is also available in other languages:{" "}
       {locales.map((locale, index) => {
         return (
@@ -30,6 +30,6 @@ export function PostLanguageLinks({ locales }: { locales: Locale[] }) {
           </>
         );
       })}{" "}
-    </span>
+    </blockquote>
   );
 }

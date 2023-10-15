@@ -10,5 +10,5 @@ export default function About({
 }) {
   const content = getContent(locale, "about");
   if (!content) notFound();
-  return <ContentBody locales={[]}>{content.body}</ContentBody>;
+  return <ContentBody>{content.body}</ContentBody>;
 }

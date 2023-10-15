@@ -13,7 +13,11 @@ export default function Post({
   if (!post) notFound();
   const locales = getLocalesOfPost(post.id).filter((l) => l !== locale);
 
-  return <ContentBody locales={locales}>{post.body}</ContentBody>;
+  return (
+    <ContentBody locale={locale} post={post}>
+      {post.body}
+    </ContentBody>
+  );
 }
 
 export function generateMetadata({
