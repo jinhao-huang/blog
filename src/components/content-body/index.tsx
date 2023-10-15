@@ -16,7 +16,7 @@ export default function ContentBody({
 }) {
   return (
     <article className="prose mx-auto dark:prose-invert">
-      <PostMetadata post={post} locale={locale}></PostMetadata>
+      {post && <PostMetadata post={post} locale={locale}></PostMetadata>}
       <MDXRemote
         source={children}
         options={{
@@ -30,9 +30,8 @@ export default function ContentBody({
   );
 }
 
-function PostMetadata({ post, locale }: { post?: Post; locale?: Locale }) {
+function PostMetadata({ post, locale }: { post: Post; locale?: Locale }) {
   const baseDict = useTranslations("Base");
-  if (!post) return null;
   const locales = locale
     ? getLocalesOfPost(post.id).filter((l) => l !== locale)
     : [];
