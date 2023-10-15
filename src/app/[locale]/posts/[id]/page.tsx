@@ -11,7 +11,6 @@ export default function Post({
   validateLocale(locale);
   const post = getPost(locale, id);
   if (!post) notFound();
-  const locales = getLocalesOfPost(post.id).filter((l) => l !== locale);
 
   return (
     <ContentBody locale={locale} post={post}>
