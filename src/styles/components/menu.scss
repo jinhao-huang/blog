@@ -31,6 +31,7 @@
 
     &[data-focused] {
       @apply bg-gray-100 text-gray-900;
+      border-radius: inherit;
     }
   }
 }
@@ -45,7 +46,6 @@
 
     &[data-focused] {
       @apply bg-gray-700 text-white;
-      border-radius: inherit;
     }
   }
 }
