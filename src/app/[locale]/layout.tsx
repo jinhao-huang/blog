@@ -3,6 +3,7 @@ import Navbar from "@/components/navbar";
 import { i18n, Locale, validateLocale } from "@/i18n";
 import { Providers } from "@/app/[locale]/providers";
 import Footer from "@/components/footer";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 export default function HomeLayout({
@@ -25,6 +26,19 @@ export default function HomeLayout({
             {children}
           </main>
           <Footer locale={locale}></Footer>
+          <div className="container">
+            <Script
+              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_MEASUREMENT_ID}`}
+            />
+            <Script id="google-analytics">
+              {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${process.env.GA_MEASUREMENT_ID}');
+              `}
+            </Script>
+          </div>
         </Providers>
       </body>
     </html>
